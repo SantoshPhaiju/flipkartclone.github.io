@@ -1,0 +1,75 @@
+@media screen and (max-width: 1280px) {
+    nav{
+        flex-direction: column;
+    }
+    .logo{
+        justify-content: center;
+        margin: 12px 0;
+    }
+    nav ul{
+        justify-content: center;
+        height: 25px;
+    }
+    nav ul li{
+        padding: 0 10px;
+    }
+    .search{
+        justify-content: center;
+    }
+    .search input{
+        margin: 10px 5px;
+        width: 55vw;
+    }
+    .slider{
+        height: 25vh;
+    }
+    .slider img{
+        height: 100%;
+    }
+    .card img{
+        width: 140px;
+    }
+
+}
+
+@media screen and (min-width: 2400px) {
+    .search input{
+        margin-left: 500px;
+        padding: 20px;
+        font-size: 30px;
+    }
+    .search button{
+        padding: 10px;
+        width: 150px;
+        font-size: 26px;
+    }
+
+    nav ul{
+        height: 12vh;
+    }
+    
+    header{
+        font-size: 30px;
+    }
+    header .logo img{
+        width: 7vw;
+    }
+    .cardContainer{
+        font-size: 26px;
+    }
+    footer{
+        font-size: 26px;
+    }
+    .card{
+        margin: 20px;
+        width: 300px;
+    }
+    .card img{
+        height: 300px;
+        width: 300px;
+    }
+    .lines{
+        font-size: 26px;
+    }
+    
+}
