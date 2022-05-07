@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -26,7 +27,7 @@ header ul a:hover {
 }
 
 nav ul li {
-  padding: 0 23px;
+  padding: 0 15px;
   list-style: none;
 }
 
@@ -54,7 +55,7 @@ nav {
   border: none;
   outline: none;
   border-radius: 2px;
-  margin-left: 150px;
+  margin-left: 70px;
 }
 
 .btn {
@@ -93,36 +94,38 @@ nav {
   margin: 12px auto;
   width: 80vw;
   overflow: hidden;
+  position: relative;
 }
 
-.slider img{
+.slider img {
   width: 100%;
 }
 
 .cardContainer {
-    /* width: 1400px; */
-    margin: 25px auto;
-    max-width: 91vw;
-    font-family: "Poppins", sans-serif;
+  /* width: 1400px; */
+  margin: 25px auto;
+  max-width: 91vw;
+  font-family: "Poppins", sans-serif;
 }
 
 .card {
-    margin-top: 0px;
-    width: 202px;
-    padding: 15px;
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: column;
+  margin-top: 0px;
+  width: 202px;
+  padding: 15px;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.card-items{
-    overflow: auto;
-    display: flex;
-    align-items: center;
+.card-items {
+  overflow: auto;
+  display: flex;
+  align-items: center;
 }
 
 .lines {
   text-align: center;
+  color: #006600;
   font-family: "Poppins", sans-serif;
 }
 
@@ -132,4 +135,202 @@ footer {
   color: white;
   font-size: 19px;
   font-family: "Poppins", sans-serif;
+}
+
+div .caption {
+  color: #fff;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 77%;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 20em;
+  width: auto;
+  padding: 16px;
+  margin-top: -70px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 10%;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 9.6%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+/* @media only screen and (max-width: 300px) {
+  .prev, .next,.caption {font-size: 11px}
+} */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0px 30px;
+  padding: 10px;
+  align-items: center;
+  margin-left: 30px;
+}
+
+/* Login modal and signup modal code is here. */
+
+.loginmodal {
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  /* display: none; */
+}
+
+.modal {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 4px;
+  color: #000099;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.75s ease;
+  position: absolute;
+  top: -50px;
+  opacity: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes slide {
+  from{
+    top: -50px;
+  }
+  to{
+    top: 50px;
+  }
+}
+@keyframes hide {
+  from{
+    top: 50px;
+  }
+  to{
+    top: -50px;
+  }
+}
+
+.modal.show {
+  animation: slide 0.75s forwards;
+  animation-iteration-count: 1;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal.hide{
+  animation: hide 0.75s backwards;
+  opacity: 0;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.modal .modalbody {
+  padding: 15px;
+}
+
+.form-group {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000033;
+}
+
+.form-group input {
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 6px 8px;
+  width: 94%;
+  border: 1px solid #111;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#loginBtn {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #2874f0;
+  margin: 10px auto 0px auto;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+}
+
+#closemodal {
+  width: 120px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #2874f0;
+  margin: 8px auto 0px auto;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+#closemodal:hover {
+  background-color: #4444f8;
+}
+#loginBtn:hover {
+  background-color: #4444f8;
 }

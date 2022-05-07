@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Shopping site for Mobiles, Electronics, Furniture, Grocery, Lifestyles, Books and More. Best Offers!</title>
+    <title>
+      Online Shopping site for Mobiles, Electronics, Furniture, Grocery,
+      Lifestyles, Books and More. Best Offers!
+    </title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utils.css" />
     <link rel="stylesheet" href="css/responsive.css" />
@@ -30,21 +33,70 @@
           />
           <button class="btn">Search</button>
         </div>
+        <div class="buttons">
+          <button class="btn" id="loginbtn">Login</button>
+          <button class="btn" id="signupbtn">Singup</button>
+        </div>
       </nav>
     </header>
 
     <main>
       <div class="container">
-        <div class="slider">
+        
+        <div class="loginmodal">
+          <div class="modal">
+            <h2>Login to your account</h2>
+            <hr>
+            <div class="modalbody">
+              <form action="#">
+                <div class="form-group my">
+                  <label for="loginemail">Email</label>
+                  <input type="email" id="loginemail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <label for="loginpass">Password</label>
+                  <input type="password" id="loginpass" placeholder="Password" required>
+                  <br>
+                  <button id="loginBtn">Login</button>
+                </div>
+              </form>
+            </div>
+            <hr>
+            <div class="modalFooter">
+              <button id="closemodal">Close</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slider fade">
           <img
-            src="https://source.unsplash.com/1200x500/?shopoing, ecommerce"
+            src="https://source.unsplash.com/1200x500/?toys, ecommerce"
             alt=""
           />
+          <div class="caption">Shop Toys And Games</div>
         </div>
+        <div class="slider fade">
+          <img
+            src="https://source.unsplash.com/1200x500/?shipping, ecommerce"
+            alt=""
+          />
+          <div class="caption">We ship over 45 million product around the world</div>
+        </div>
+        <div class="slider fade">
+          <img
+            src="https://source.unsplash.com/1200x500/?techsolutions, ecommerce"
+            alt=""
+          />
+          <div class="caption">Discover our tech solutions</div>
+        </div>
+       
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
 
         <div class="cardContainer">
           <br />
-          <h2>Join the cricket fun</h2>
+          <h2>Cricket</h2>
           <div class="card-items">
             <div class="card">
               <img
@@ -128,7 +180,7 @@
 
         <div class="cardContainer">
           <br />
-          <h2>Join the football fun</h2>
+          <h2>Football</h2>
           <div class="card-items">
             <div class="card">
               <img src="https://source.unsplash.com/200x200/?ipl" alt="" />
